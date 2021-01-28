@@ -75,7 +75,7 @@ def split_seqs(seqs, split_method='random'):
     return train_seqs, val_seqs
 
 def setup():
-    fnames = [ 'data/headlines/abcnews-date-text.csv' ]
+    fnames = [ 'data/headlines/abcnews-date-text.head1k.csv' ]
     seqs = process(fnames)
     vocabulary = sorted({ word for seq in seqs for word in seq })
     vocabulary = { word: idx + 1 for idx, word in enumerate(vocabulary) }
