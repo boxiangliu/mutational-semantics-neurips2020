@@ -16,7 +16,7 @@ def read_headline_info(f, orig_line):
     orig = orig_line[len(info_prefix):]
 
     info = { 'orig': orig }
-
+    breakpoint()
     assert(f.readline().rstrip().endswith('Modifications:'))
 
     info['mod'] = extract_content(f.readline())
