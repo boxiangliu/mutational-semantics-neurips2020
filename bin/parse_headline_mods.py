@@ -9,6 +9,7 @@ from pattern3.en import conjugate, singularize
 info_prefix = 'Original headline: '
 
 def extract_content(line):
+    line = line.decode('utf-8')
     return (': '.join(' | '.join(line.split(' | ')[1:])
                       .strip().split(': ')[:-1]))
 
