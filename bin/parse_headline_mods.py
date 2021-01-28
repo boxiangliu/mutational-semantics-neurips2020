@@ -16,20 +16,19 @@ def read_headline_info(f, orig_line):
     orig = orig_line[len(info_prefix):]
 
     info = { 'orig': orig }
-    breakpoint()
-    assert(f.readline().rstrip().endswith('Modifications:'))
+    assert(f.readline().rstrip().endswith(b'Modifications:'))
 
     info['mod'] = extract_content(f.readline())
     info['mod_1'] = extract_content(f.readline())
     info['mod_2'] = extract_content(f.readline())
 
-    assert(f.readline().rstrip().endswith('Least change:'))
+    assert(f.readline().rstrip().endswith(b'Least change:'))
 
     info['least_0'] = extract_content(f.readline())
     info['least'] = extract_content(f.readline())
     info['least_1'] = extract_content(f.readline())
 
-    assert(f.readline().rstrip().endswith('Most change:'))
+    assert(f.readline().rstrip().endswith(b'Most change:'))
 
     info['most'] = extract_content(f.readline())
     info['most_1'] = extract_content(f.readline())
