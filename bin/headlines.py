@@ -213,6 +213,7 @@ def analyze_semantics(args, model, seq_to_mutate, vocabulary,
         ))
 
 if __name__ == '__main__':
+    breakpoint()
     args = parse_args()
 
     seqs, vocabulary = setup()
